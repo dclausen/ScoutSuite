@@ -1,0 +1,12 @@
+{
+    "about": "This is a ruleset for Gsuite",
+    "rules": {
+        "employees-without-2fa.json": [
+            {
+                "args": [],
+                "enabled": true,
+                "level": "danger"
+            }
+        ]
+    }
+}
