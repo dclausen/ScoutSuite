@@ -1,5 +1,5 @@
 {
-    "description": "Repository default branch has code reviews disabled",
+    "description": "Repository has code reviews disabled",
     "rationale": "",
     "remediation": "",
     "compliance": [
@@ -9,7 +9,7 @@
             "reference": ""
         }
     ],
-    "dashboard_name": "Organization",
+    "dashboard_name": "Repository",
     "path": "organizations.organization.id.repos.id",
     "conditions": [ "and",
       [ "reviews_required", "false", "" ]

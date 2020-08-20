@@ -9,7 +9,7 @@
             "reference": ""
         }
     ],
-    "dashboard_name": "Organization",
+    "dashboard_name": "Repository",
     "path": "organizations.organization.id.repos.id",
     "conditions": [ "and",
       [ "status_checks_required", "false", "" ]
