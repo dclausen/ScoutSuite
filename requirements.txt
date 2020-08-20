@@ -65,3 +65,6 @@ oci>=2.2.4
 # Gsuite
 google-auth-httplib2>=0.0.4
 google-auth-oauthlib>=0.4.1
+
+# Github
+PyGithub>=1.5.3
