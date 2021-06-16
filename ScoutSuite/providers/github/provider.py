@@ -1,11 +1,6 @@
-import copy
-import json
-
-from ScoutSuite import __version__ as scout_version
-from ScoutSuite.core.console import print_exception, print_info, print_error
-from ScoutSuite.providers.base.configs.browser import get_object_at
 from ScoutSuite.providers.base.provider import BaseProvider
 from ScoutSuite.providers.github.services import GithubServicesConfig
+
 
 class GithubProvider(BaseProvider):
     """
@@ -31,17 +26,17 @@ class GithubProvider(BaseProvider):
         """
         services = [] if services is None else services
         skipped_services = [] if skipped_services is None else skipped_services
-
         self.last_run = None
         self.metadata = None
         self.credentials = kwargs['credentials']
+        self.repositories = kwargs['repositories']
         self.provider_code = 'github'
         self.provider_name = 'Github'
         self.environment = None
         self.account_id = None
-        self.services_config = GithubServicesConfig
+        self.services = GithubServicesConfig(self.credentials, self.repositories)
 
-        super(GithubProvider, self).__init__(report_dir, timestamp, services, skipped_services)
+        super().__init__(report_dir, timestamp, services, skipped_services)
 
     def get_report_name(self):
         """
